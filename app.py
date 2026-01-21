@@ -402,5 +402,9 @@ def update_all(months_range, cbwd_list, relayoutData, selectedData, reset_key):
         kpi_n, kpi_r2, kpi_rmse, kpi_mae
     )
 
+import os
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port, debug=False)
+
